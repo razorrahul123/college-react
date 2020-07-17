@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/college-react/static/css/main.4c1eef3b.chunk.css",
+    "main.js": "/college-react/static/js/main.273556e3.chunk.js",
+    "main.js.map": "/college-react/static/js/main.273556e3.chunk.js.map",
+    "runtime-main.js": "/college-react/static/js/runtime-main.469b5b5f.js",
+    "runtime-main.js.map": "/college-react/static/js/runtime-main.469b5b5f.js.map",
+    "static/js/2.4018c7d9.chunk.js": "/college-react/static/js/2.4018c7d9.chunk.js",
+    "static/js/2.4018c7d9.chunk.js.map": "/college-react/static/js/2.4018c7d9.chunk.js.map",
+    "index.html": "/college-react/index.html",
+    "precache-manifest.6c7c94dc0c1654c9a20ca38f2fc7be80.js": "/college-react/precache-manifest.6c7c94dc0c1654c9a20ca38f2fc7be80.js",
+    "service-worker.js": "/college-react/service-worker.js",
+    "static/css/main.4c1eef3b.chunk.css.map": "/college-react/static/css/main.4c1eef3b.chunk.css.map",
+    "static/js/2.4018c7d9.chunk.js.LICENSE.txt": "/college-react/static/js/2.4018c7d9.chunk.js.LICENSE.txt",
+    "static/media/college_02.jpg": "/college-react/static/media/college_02.619ee97e.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.469b5b5f.js",
+    "static/js/2.4018c7d9.chunk.js",
+    "static/css/main.4c1eef3b.chunk.css",
+    "static/js/main.273556e3.chunk.js"
+  ]
+}
