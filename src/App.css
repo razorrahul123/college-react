@@ -1,38 +1,235 @@
-.App {
-  text-align: center;
+* {
+  margin: 0px;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.root-div {
+  max-width: 1300px;
+  padding: 16px 12px;
+  margin: 16px auto 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.root-div > section {
+  padding: 0px 20px 0px 0px;
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.infinite-scroll-list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  list-style-type: none;
+}
+
+.infinite-scroll-list > div {
+  position: relative;
+  display: block;
+  width: 48%;
+  margin: 30px 5px;
+  border-radius: 5px;
+
+  box-shadow: 0 0 19px 0 rgba(68, 68, 68, 0.1);
+
+  border: solid 0.2px rgba(68, 68, 68, 0.1);
+}
+.card-container:hover {
+  transform: scale(1.02);
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.img-container {
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+  filter: brightness(50%);
+}
+
+.img-container > img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  background: #232122;
+  color: #fff;
+  overflow: visible;
+}
+
+.promoted-container {
+  position: absolute;
+  z-index: 1;
+  top: -15px;
+  right: -7px;
+  /* background-color: rgb(43, 172, 54); */
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.4rem 0.2rem 0.8rem;
+}
+
+.promoted-container > span {
+  background-color: #68a7ff;
+  line-height: 20px;
+  padding: 3px 20px 4px 20px;
+}
+
+.promoted-container::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid #68a7ff;
+  border-bottom: 14px solid #68a7ff;
+  top: 0;
+  border-top: 14px solid #68a7ff;
+}
+
+.info-container {
+  display: flex;
+}
+
+.info-left-wrapper {
+  width: 60%;
+}
+
+.info-left {
+  padding: 20px 20px 10px 20px;
+}
+
+.info-left .title {
+  font-size: 18px;
+  font-weight: bold;
+}
+.info-right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 20px 30px 10px 20px;
+}
+
+.near-container {
+  font-size: 13px;
+}
+
+.approx {
+  color: #adadad;
+}
+
+.match-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+}
+
+.tags-container {
+  z-index: 1;
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+}
+
+.rating-container {
+  z-index: 1;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #f5a626;
+  padding: 5px;
+  top: 30px;
+  right: 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.ranking-container {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+  right: 20px;
+  bottom: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tags-container > span {
+  color: black;
+  background-color: white;
+  padding: 5px 15px;
+  margin: 0px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.amenities-container {
+  display: flex;
+  padding: 0px;
+  margin-top: 30px;
+  list-style-type: none;
+}
+
+.amenities-container > li {
+  /* display: block; */
+  color: #37b396;
+  padding: 2px 3px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.percent-containter {
+  background-color: #dd1c26;
+  border-radius: 4px 0px 0px 4px;
+  padding: 0px 10px 0px 6px;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.percent-containter::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 37px;
+  border-left: 10px solid transparent;
+  border-right: 9px solid #dd1c26;
+  border-bottom: 8px solid transparent;
+  top: 0px;
+  border-top: 8px solid transparent;
+}
+.discount-container {
+  position: relative;
+  font-size: 12px;
+}
+
+.original-fees-container {
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+
+.discount-fees-container {
+  font-size: 28px;
+  color: #dd1c26;
+  font-weight: bold;
+}
+
+.fee-cycle-container {
+  font-size: 12px;
+}
+
+.offer-container {
+  margin-bottom: 10px;
+  padding: 5px 20px;
+  border-radius: 0px 20px 20px 0px;
+  background-color: #ccf5e7;
+  font-size: 13px;
 }
